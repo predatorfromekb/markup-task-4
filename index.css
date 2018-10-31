@@ -1,0 +1,115 @@
+section
+{
+    width: 100%;
+}
+
+input[name='selector']
+{
+    display: none;
+}
+
+input[name='selector'] + label
+{
+    background-image: url('./images/horizontal.png');
+    height: 40px;
+    width: 40px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[name='selector']:checked + label
+{
+    background-image: url('./images/vertical.png');
+}
+
+.cat-box
+{
+    width: 250px;
+    height: 300px;
+    border: 1px solid grey;
+    display: inline-block;
+    margin: 0 auto 5px;
+    vertical-align: top;
+}
+
+input[name='selector']:checked ~ section .cat-box
+{
+    width: 500px;
+    height: auto;
+    display: block;
+}
+
+.cat-box:hover
+{
+    border: red 3px dotted;
+}
+
+.cat-image
+{
+    width: 100%;
+}
+
+.cat-image:hover
+{
+    transform: scale(1.2);
+    transition: 1s;
+}
+
+input[name='selector']:not(:checked) ~ section .cat-settings-wrapper
+{
+    margin: 0 10px;
+}
+
+.cat-settings-wrapper .name
+{
+    margin: 10px 0;
+    transition: 1s;
+}
+
+.cat-settings-wrapper .name:hover
+{
+    color: red;
+}
+
+.cat-settings
+{
+    font: 14px 'Times New Roman';
+    color: grey;
+}
+
+.cat-settings p
+{
+    margin: 0;
+}
+
+.cat-settings .age::before
+{
+    content: 'Возраст: ';
+}
+
+.cat-settings .breed::before
+{
+    content: 'Порода: ';
+}
+
+.cat-settings .diseases::before
+{
+    content: 'Болезни: ';
+}
+
+.cat-settings .status::before
+{
+    content: 'Статус: ';
+}
+
+input[name='selector']:not(:checked) ~ section .cat-settings .description
+{
+    display: none;
+}
+
+input[name='selector']:checked ~ section .cat-settings .breed,
+input[name='selector']:checked ~ section .cat-settings .diseases,
+input[name='selector']:checked ~ section .cat-settings .status
+{
+    display: none;
+}
