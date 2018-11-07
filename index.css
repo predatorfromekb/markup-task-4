@@ -1,4 +1,4 @@
-section
+.container
 {
     width: 100%;
 }
@@ -32,7 +32,7 @@ input[name='selector']:checked + label
     vertical-align: top;
 }
 
-input[name='selector']:checked ~ section .cat-box
+input[name='selector']:checked ~ .container .cat-box
 {
     width: 500px;
     height: auto;
@@ -55,7 +55,7 @@ input[name='selector']:checked ~ section .cat-box
     transition: 1s;
 }
 
-input[name='selector']:not(:checked) ~ section .cat-settings-wrapper
+input[name='selector']:not(:checked) ~ .container .cat-settings-wrapper
 {
     margin: 0 10px;
 }
@@ -104,14 +104,14 @@ input[name='selector']:not(:checked) ~ section .cat-settings-wrapper
     content: 'Статус: ';
 }
 
-input[name='selector']:not(:checked) ~ section .cat-settings .description
+input[name='selector']:not(:checked) ~ .container .cat-settings .description
 {
     display: none;
 }
 
-input[name='selector']:checked ~ section .cat-settings .breed,
-input[name='selector']:checked ~ section .cat-settings .diseases,
-input[name='selector']:checked ~ section .cat-settings .status
+input[name='selector']:checked ~ .container .cat-settings .breed,
+input[name='selector']:checked ~ .container .cat-settings .diseases,
+input[name='selector']:checked ~ .container .cat-settings .status
 {
     display: none;
 }
