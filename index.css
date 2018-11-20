@@ -1,6 +1,7 @@
 .container
 {
     width: 100%;
+    text-align: center;
 }
 
 input[name='selector']
@@ -26,7 +27,8 @@ input[name='selector']:checked + label
 {
     width: 250px;
     height: 300px;
-    border: 1px solid grey;
+    border: 1px solid #808080;
+    padding: 2px;
     display: inline-block;
     margin: 0 auto 5px;
     vertical-align: top;
@@ -41,7 +43,8 @@ input[name='selector']:checked ~ .container .cat-box
 
 .cat-box:hover
 {
-    border: red 3px dotted;
+    border: #f00 3px dotted;
+    padding: 0;
 }
 
 .cat-image
@@ -55,63 +58,63 @@ input[name='selector']:checked ~ .container .cat-box
     transition: 1s;
 }
 
-input[name='selector']:not(:checked) ~ .container .cat-settings-wrapper
+input[name='selector']:not(:checked) ~ .container .cat-properties-wrapper
 {
     margin: 0 10px;
 }
 
-.cat-settings-wrapper .name
+.cat-properties-wrapper .name
 {
     margin: 10px 0;
     transition: 1s;
 }
 
-.cat-settings-wrapper .name:hover
+.cat-properties-wrapper .name:hover
 {
-    color: red;
+    color: #f00;
 }
 
-.cat-settings
+.cat-properties
 {
     font: 14px 'Times New Roman';
-    color: grey;
+    color: #808080;
 }
 
-.cat-settings p
+.cat-properties p
 {
     margin: 0;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.cat-settings .age::before
+.cat-properties .age::before
 {
     content: 'Возраст: ';
 }
 
-.cat-settings .breed::before
+.cat-properties .breed::before
 {
     content: 'Порода: ';
 }
 
-.cat-settings .diseases::before
+.cat-properties .diseases::before
 {
     content: 'Болезни: ';
 }
 
-.cat-settings .status::before
+.cat-properties .status::before
 {
     content: 'Статус: ';
 }
 
-input[name='selector']:not(:checked) ~ .container .cat-settings .description
+input[name='selector']:not(:checked) ~ .container .cat-properties .description
 {
     display: none;
 }
 
-input[name='selector']:checked ~ .container .cat-settings .breed,
-input[name='selector']:checked ~ .container .cat-settings .diseases,
-input[name='selector']:checked ~ .container .cat-settings .status
+input[name='selector']:checked ~ .container .cat-properties .breed,
+input[name='selector']:checked ~ .container .cat-properties .diseases,
+input[name='selector']:checked ~ .container .cat-properties .status
 {
     display: none;
 }
