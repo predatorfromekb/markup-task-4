@@ -30,7 +30,7 @@ input[name='selector']:checked + label
     border: 1px solid #808080;
     padding: 2px;
     display: inline-block;
-    margin: 0 auto 5px;
+    margin: 20px;
     vertical-align: top;
 }
 
@@ -38,6 +38,7 @@ input[name='selector']:checked ~ .container .cat-box
 {
     width: 500px;
     height: auto;
+    margin: 40px auto;
     display: block;
 }
 
